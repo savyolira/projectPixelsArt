@@ -5,16 +5,17 @@
     border: 1px solid black;
     width: 40px;
     height: 40px;
+    display: inline-block;
 }
-.color.preto{
+.preto{
     background-color: black;
 }
-.color.vermelho{
+.vermelho{
     background-color: red;
 }
-.color.azul{
+.azul{
     background-color: blue;
 }
-.color.verde{
+.verde{
     background-color: green;
 }
