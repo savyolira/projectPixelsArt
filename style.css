@@ -1,0 +1,17 @@
+.color{
+    border: 1px solid black;
+    width: 40px;
+    height: 40px;
+}
+.preto{
+    background-color: black;
+}
+.vermelho{
+    background-color: red;
+}
+.azul{
+    background-color: blue;
+}
+.verde{
+    background-color: green;
+}
