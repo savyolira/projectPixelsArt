@@ -19,6 +19,10 @@
 .verde{
     background-color: green;
 }
+.selected{
+    
+}
+
 #color-palette, #pixel-board{
     width: 250px;
     text-align: center;
