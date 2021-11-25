@@ -1,52 +1,22 @@
-const selected = document.querySelector(".selected");
-const color = document.querySelector(".color");
-const preto = document.querySelector(".preto");
-const vermelho = document.querySelector(".vermelho");
-const azul = document.querySelector(".azul");
-const verde = document.querySelector(".verde");
-preto.classList.add("selected");
+const colors = document.querySelector("#color-palette");
+const pixels = document.querySelector("#pixel-board")
+const clear = document.querySelector("#clear-board")
 
-preto.addEventListener("click", function(){
-    if(preto.classList.contains("selected") === true){
-        preto.classList.remove("selected");
-    }else{
-        preto.classList.add("selected");
-        vermelho.classList.remove("selected");
-        azul.classList.remove("selected");
-        verde.classList.remove("selected");
-    }
+colors.addEventListener("click", (cor)=>{
+    const selected = document.querySelector(".selected");
+    selected.classList.remove('selected');
+    cor.target.classList.add("selected")
 })
 
-vermelho.addEventListener("click", function(){
-    if(vermelho.classList.contains("selected") === true){
-        vermelho.classList.remove("selected");
-    }else{
-        vermelho.classList.add("selected");
-        preto.classList.remove("selected");
-        azul.classList.remove("selected");
-        verde.classList.remove("selected");
-    }
+pixels.addEventListener("click", (pix)=>{
+    const selected = document.querySelector(".selected")
+    const selectedPixel = pix.target
+    selectedPixel.id = selected.id
 })
 
-azul.addEventListener("click", function(){
-    if(azul.classList.contains("selected") === true){
-        azul.classList.remove("selected");
-    }else{
-        azul.classList.add("selected");
-        preto.classList.remove("selected");
-        vermelho.classList.remove("selected");
-        verde.classList.remove("selected");
+clear.addEventListener("click", ()=>{
+    const pix = document.querySelectorAll(".pixel")
+    for(let i = 0; i < pix.length; i+=1){
+        pix[i].id = "branco"
     }
 })
-
-verde.addEventListener("click", function(){
-    if(verde.classList.contains("selected") === true){
-        verde.classList.remove("selected");
-    }else{
-        verde.classList.add("selected");
-        preto.classList.remove("selected");
-        vermelho.classList.remove("selected");
-        azul.classList.remove("selected");
-    }
-})
-
